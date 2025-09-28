@@ -1,0 +1,25 @@
+.root {
+    -fx-font-family: "SF Pro Text", "Segoe UI", Roboto, Arial;
+    -fx-base: #1f2335;
+    -fx-background: #24283b;
+}
+.tool-bar {
+    -fx-background-color: #1f2335;
+}
+.titled-pane > .title {
+    -fx-background-color: #2e334a;
+    -fx-text-fill: #e0e0e0;
+    -fx-font-weight: bold;
+}
+.label {
+    -fx-text-fill: #e0e0e0;
+}
+.button {
+    -fx-background-color: linear-gradient(#6a5acd, #483d8b);
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-padding: 6 12 6 12;
+}
+.button:hover { -fx-opacity: 0.9; }
+.scroll-pane { -fx-background: transparent; }
+

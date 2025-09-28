@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ayzekssoft.nextday.ui.CosmeticDialogController">
+    <top>
+        <ToolBar>
+            <Label text="Тип:"/>
+            <ChoiceBox fx:id="categoryChoice"/>
+            <Button text="Добавить" onAction="#onAdd"/>
+            <Button text="Убрать" onAction="#onRemove"/>
+            <Button text="Выбрать" onAction="#onSelect"/>
+        </ToolBar>
+    </top>
+    <center>
+        <SplitPane>
+            <TableView fx:id="itemsTable">
+                <columns>
+                    <TableColumn fx:id="nameCol" text="Имя" prefWidth="260"/>
+                </columns>
+            </TableView>
+            <GridPane hgap="8" vgap="8">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+                <Label text="Шампунь:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <Label fx:id="shampooLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Label text="Гель:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <Label fx:id="gelLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <Label text="Дезодорант:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <Label fx:id="deodorantLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                <Label text="Спрей:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <Label fx:id="sprayLabel" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                <Label text="Антиперспирант:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <Label fx:id="antiperspirantLabel" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+                <Label text="Крем:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <Label fx:id="creamLabel" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+                <Label text="Спрей для волос:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                <Label fx:id="hairSprayLabel" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+            </GridPane>
+        </SplitPane>
+    </center>
+</BorderPane>
+

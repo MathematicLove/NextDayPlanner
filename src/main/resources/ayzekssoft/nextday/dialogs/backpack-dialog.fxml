@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ayzekssoft.nextday.ui.BackpackDialogController">
+    <top>
+        <ToolBar>
+            <Button text="Добавить" onAction="#onAddItem"/>
+            <Button text="Убрать" onAction="#onRemoveItem"/>
+            <Button text="В рюкзак" onAction="#onAddToPack"/>
+            <Button text="Убрать из рюкзака" onAction="#onRemoveFromPack"/>
+        </ToolBar>
+    </top>
+    <center>
+        <SplitPane>
+            <TableView fx:id="itemsTable">
+                <columns>
+                    <TableColumn fx:id="nameCol" text="Имя" prefWidth="250"/>
+                </columns>
+            </TableView>
+            <ListView fx:id="packList"/>
+        </SplitPane>
+    </center>
+</BorderPane>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ayzekssoft.nextday.ui.HomeDialogController">
+    <top>
+        <ToolBar>
+            <Label text="Категория:"/>
+            <ChoiceBox fx:id="categoryChoice"/>
+            <Button text="Добавить" onAction="#onAdd"/>
+            <Button text="Убрать" onAction="#onRemove"/>
+            <Button text="Выбрать" onAction="#onWear"/>
+        </ToolBar>
+    </top>
+    <center>
+        <SplitPane>
+            <TableView fx:id="itemsTable">
+                <columns>
+                    <TableColumn fx:id="nameCol" text="Имя" prefWidth="260"/>
+                </columns>
+            </TableView>
+            <GridPane hgap="8" vgap="8">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+                <Label text="Футболка:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <Label fx:id="tshirtLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Label text="Нижнее бельё:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <Label fx:id="underwearLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <Label text="Брюки:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <Label fx:id="pantsLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            </GridPane>
+        </SplitPane>
+    </center>
+</BorderPane>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ayzekssoft.nextday.ui.UnderwearDialogController">
+    <top>
+        <ToolBar>
+            <Label text="Тип:"/>
+            <ChoiceBox fx:id="categoryChoice"/>
+            <Button text="Добавить" onAction="#onAdd"/>
+            <Button text="Убрать" onAction="#onRemove"/>
+            <Button text="Выбрать" onAction="#onSelect"/>
+        </ToolBar>
+    </top>
+    <center>
+        <SplitPane>
+            <TableView fx:id="itemsTable">
+                <columns>
+                    <TableColumn fx:id="nameCol" text="Имя" prefWidth="260"/>
+                </columns>
+            </TableView>
+            <GridPane hgap="8" vgap="8">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+                <Label text="Трусики:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <Label fx:id="pantiesLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                <Label text="Носки:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <Label fx:id="socksLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <Label text="Майка:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <Label fx:id="undershirtLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            </GridPane>
+        </SplitPane>
+    </center>
+</BorderPane>
+

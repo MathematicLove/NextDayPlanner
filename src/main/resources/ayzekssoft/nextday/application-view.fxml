@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ayzekssoft.nextday.ApplicationController">
+    <top>
+        <ToolBar>
+            <Label text="Дата:"/>
+            <DatePicker fx:id="datePicker" onAction="#onDateChanged"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button text="Показать выбор" onAction="#onShowSelectionClick"/>
+        </ToolBar>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" pannable="true">
+            <content>
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+
+                    <TitledPane text="Одежда">
+                        <VBox spacing="6">
+                            <padding>
+                                <Insets top="10" right="10" bottom="10" left="10"/>
+                            </padding>
+                            <Button fx:id="clothingButton" text="Открыть" onAction="#onClothingClick"/>
+                        </VBox>
+                    </TitledPane>
+
+                    <TitledPane text="Рюкзак">
+                        <VBox spacing="6">
+                            <padding>
+                                <Insets top="10" right="10" bottom="10" left="10"/>
+                            </padding>
+                            <Button fx:id="backpackButton" text="Открыть" onAction="#onBackpackClick"/>
+                        </VBox>
+                    </TitledPane>
+
+                    <TitledPane text="Часы">
+                        <VBox spacing="6">
+                            <padding>
+                                <Insets top="10" right="10" bottom="10" left="10"/>
+                            </padding>
+                            <Button fx:id="watchButton" text="Открыть" onAction="#onWatchClick"/>
+                        </VBox>
+                    </TitledPane>
+
+                    <TitledPane text="Обои">
+                        <VBox spacing="6">
+                            <padding>
+                                <Insets top="10" right="10" bottom="10" left="10"/>
+                            </padding>
+                            <Button fx:id="wallpapersButton" text="Открыть" onAction="#onWallpapersClick"/>
+                        </VBox>
+                    </TitledPane>
+
+                    <TitledPane text="Нижнее бельё">
+                        <VBox spacing="6">
+                            <padding>
+                                <Insets top="10" right="10" bottom="10" left="10"/>
+                            </padding>
+                            <Button fx:id="underwearButton" text="Открыть" onAction="#onUnderwearClick"/>
+                        </VBox>
+                    </TitledPane>
+
+                    <TitledPane text="Домашняя одежда">
+                        <VBox spacing="6">
+                            <padding>
+                                <Insets top="10" right="10" bottom="10" left="10"/>
+                            </padding>
+                            <Button text="Открыть" onAction="#onHomeClick"/>
+                        </VBox>
+                    </TitledPane>
+
+                    <TitledPane text="Косметика">
+                        <VBox spacing="6">
+                            <padding>
+                                <Insets top="10" right="10" bottom="10" left="10"/>
+                            </padding>
+                            <Button text="Открыть" onAction="#onCosmeticClick"/>
+                        </VBox>
+                    </TitledPane>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
